@@ -4,10 +4,172 @@
   <meta charset="UTF-8">
   <title>Masjid Name – Home</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f6fb;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(135deg, #0b8b6f, #067257);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      background: rgba(255,255,255,0.15);
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .logo-text span:first-child {
+      font-weight: 700;
+      font-size: 18px;
+    }
+    nav a {
+      color: #e8fff8;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      max-width: 960px;
+      margin: 32px auto 24px;
+      padding: 24px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0b8b6f0d, #0b8b6f22);
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+      gap: 20px;
+    }
+    .hero-title {
+      font-size: 28px;
+      margin: 0 0 8px;
+      color: #064b3b;
+    }
+    .hero-subtitle {
+      margin: 0 0 12px;
+      font-size: 16px;
+      color: #345;
+    }
+    .hero-highlight {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #0b8b6f;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .hero-info {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #345;
+    }
+    .hero-grid {
+      display: grid;
+      gap: 10px;
+    }
+    .card {
+      border-radius: 12px;
+      padding: 14px 16px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+      font-size: 14px;
+    }
+    .card h2 {
+      font-size: 15px;
+      margin: 0 0 6px;
+      color: #064b3b;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e4f4ef;
+      color: #0b8b6f;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .two-col {
+      max-width: 960px;
+      margin: 0 auto 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 0 24px;
+    }
+    .link-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #0b8b6f;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .link-button.secondary {
+      background: #fff;
+      color: #0b8b6f;
+      border: 1px solid #0b8b6f;
+    }
+    footer {
+      text-align: center;
+      padding: 16px 24px 24px;
+      font-size: 12px;
+      color: #556;
+    }
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      nav a {
+        margin: 4px 0 0 12px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- same header/nav as above -->
   <header>
+    <div class="logo-area">
+      <!-- Replace "MN" with initials of your masjid or replace this circle with an <img> tag -->
+      <div class="logo-circle">MN</div>
+      <div class="logo-text">
+        <span>Masjid Name</span>
+        <span>Serving the Community</span>
+      </div>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About us</a>
@@ -18,9 +180,59 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Welcome to Masjid Name</h1>
-    <p>Serving the Muslim community of the Chicago suburbs.</p>
-  </main>
+  <section class="hero">
+    <div>
+      <p class="hero-highlight">Welcome to Masjid Name</p>
+      <h1 class="hero-title">A house of worship, learning, and community in the Chicago suburbs.</h1>
+      <p class="hero-subtitle">
+        Join us for the five daily prayers, Jumuah, classes, and family programs for all ages.
+      </p>
+      <p class="hero-info">
+        Address: 123 Masjid Street, City, IL 00000<br>
+        Phone: (630) 000‑0000
+      </p>
+    </div>
+
+    <div class="hero-grid">
+      <div class="card">
+        <h2>Today’s schedule</h2>
+        <p class="pill">See full times on Prayer Times page</p>
+        <p style="margin-top:8px;">Fajr: 5:00 AM<br>Dhuhur: 1:15 PM<br>Asr: 4:30 PM<br>Maghrib: Sunset<br>Isha: 8:00 PM</p>
+        <a href="prayer-times.html" class="link-button">View prayer times</a>
+      </div>
+      <div class="card">
+        <h2>Jumuah</h2>
+        <p>First Khutbah: 1:15 PM<br>Second Khutbah: 2:15 PM</p>
+        <a href="parking.html" class="link-button secondary">Parking & entry info</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="two-col">
+    <div class="card">
+      <h2>Programs & services</h2>
+      <p>
+        Qur’an classes, youth programs, family nights, and community service projects
+        are offered throughout the year. Visit the About page to learn more.
+      </p>
+      <a href="about.html" class="link-button">About our masjid</a>
+    </div>
+    <div class="card">
+      <h2>Support the masjid</h2>
+      <p>
+        Your donations keep the masjid open, maintain the building, and fund education
+        and outreach programs.
+      </p>
+      <a href="donate.html" class="link-button">Donate online</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Masjid Name. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
