@@ -1,0 +1,74 @@
+/* Logo and header helpers */
+.site-logo {
+	height: 56px;
+	width: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.logo-area .logo-text {
+	margin-left: 8px;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.1;
+	color: #fff;
+}
+
+.brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.logo-circle {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 18px;
+	background: rgba(255,255,255,0.15);
+}
+
+/* Logo and header helpers */
+.site-logo {
+	height: 56px;
+	width: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.logo-area .logo-text {
+	margin-left: 8px;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.1;
+	color: #fff;
+}
+
+.brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.logo-circle {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 18px;
+	background: rgba(255,255,255,0.15);
+}
+
