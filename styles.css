@@ -179,18 +179,6 @@ footer {
 }
 
 /* =========================================
-   RESPONSIVE (MOBILE)
-   ========================================= */
-@media (max-width: 720px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-  .main-nav {
-    gap: 12px;
-  }
-}
-
-/* =========================================
    CONTACT PAGE STYLES
    ========================================= */
 .contact-container {
@@ -251,7 +239,58 @@ footer {
   min-height: 400px;
 }
 
-/* Update the existing mobile media query at the bottom of your CSS to include the map */
+/* =========================================
+   DONATE PAGE STYLES (Fixed to stack in center)
+   ========================================= */
+.donate-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.donate-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.donate-card {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.donate-card h3 {
+  font-size: 20px;
+  color: #064b3b;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.donate-card p {
+  color: #556;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.zelle-info {
+  background: #f8fbfb;
+  border: 1px dashed #0b8b6f;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #064b3b;
+  font-size: 16px;
+}
+
+/* =========================================
+   RESPONSIVE (MOBILE)
+   ========================================= */
 @media (max-width: 720px) {
   .hero {
     grid-template-columns: 1fr;
@@ -259,7 +298,6 @@ footer {
   .main-nav {
     gap: 12px;
   }
-  /* Add these two blocks to stack the contact page on mobile */
   .contact-container {
     grid-template-columns: 1fr;
   }
