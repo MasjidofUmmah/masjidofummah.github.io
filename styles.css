@@ -368,3 +368,91 @@ footer {
   font-size: 14px;
   line-height: 1.6;
 }
+
+/* =========================================
+   PARKING PAGE STYLES
+   ========================================= */
+.parking-container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 32px;
+  margin-top: 32px;
+  align-items: start;
+}
+
+.parking-map-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.legend-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.legend-card h2 {
+  font-size: 20px;
+  color: #064b3b;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f3f6fb;
+}
+
+.legend-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.color-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Legend Colors matching your map */
+.color-red { background-color: #ff3b30; }
+.color-purple { background-color: #c026d3; }
+.color-orange { background-color: #f97316; }
+.color-green { background-color: #22c55e; }
+.color-blue { background-color: #3b82f6; }
+
+.legend-text h3 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  color: #222;
+}
+
+.legend-text p {
+  margin: 0;
+  font-size: 13px;
+  color: #556;
+  line-height: 1.4;
+}
+
+.parking-warning {
+  background: #fff1f2;
+  border-left: 4px solid #e11d48;
+  padding: 16px;
+  border-radius: 0 8px 8px 0;
+  margin-top: 24px;
+  font-weight: 500;
+  color: #9f1239;
+  font-size: 14px;
+}
+
+/* Update mobile layout */
+@media (max-width: 850px) {
+  .parking-container {
+    grid-template-columns: 1fr;
+  }
+}

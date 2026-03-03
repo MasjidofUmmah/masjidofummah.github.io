@@ -2,177 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Masjid Name – Parking</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f3f6fb;
-      color: #222;
-    }
-
-    .site-header {
-      background: linear-gradient(135deg, #0b8b6f, #067257);
-      color: #fff;
-      padding: 18px 24px 10px;
-      text-align: center;
-    }
-
-    .site-branding {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .site-logo-large {
-      /* Adjusted height so the new logo fits nicely without being too huge */
-      height: 110px; 
-      width: auto;
-      margin-bottom: 6px;
-    }
-
-    /* We keep this hidden visually but screen readers can still read it */
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-
-    .main-nav {
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 18px;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .main-nav a {
-      color: #e8fff8;
-      text-decoration: none;
-      margin-left: 16px;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .main-nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      max-width: 960px;
-      margin: 32px auto 24px;
-      padding: 24px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0b8b6f0d, #0b8b6f22);
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
-      gap: 20px;
-    }
-    .hero-title {
-      font-size: 28px;
-      margin: 0 0 8px;
-      color: #064b3b;
-    }
-    .hero-subtitle {
-      margin: 0 0 12px;
-      font-size: 16px;
-      color: #345;
-    }
-    .hero-highlight {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #0b8b6f;
-      color: #fff;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .hero-info {
-      font-size: 14px;
-      margin-top: 10px;
-      color: #345;
-    }
-    .hero-grid {
-      display: grid;
-      gap: 10px;
-    }
-    .card {
-      border-radius: 12px;
-      padding: 14px 16px;
-      background: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-      font-size: 14px;
-    }
-    .card h2 {
-      font-size: 15px;
-      margin: 0 0 6px;
-      color: #064b3b;
-    }
-    .two-col {
-      max-width: 960px;
-      margin: 0 auto 32px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      padding: 0 24px;
-    }
-    .link-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: #0b8b6f;
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .link-button.secondary {
-      background: #fff;
-      color: #0b8b6f;
-      border: 1px solid #0b8b6f;
-    }
-    footer {
-      text-align: center;
-      padding: 16px 24px 24px;
-      font-size: 12px;
-      color: #556;
-    }
-    @media (max-width: 720px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      .main-nav {
-        gap: 12px;
-      }
-    }
-
-    .prayer-times-widget {
-      margin-top: 8px;
-    }
-  </style>
+  <title>Masjid of Ummah – Parking</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
-  <header>
-    <nav>
+  
+  <!-- Standard Site Header -->
+  <header class="site-header">
+    <div class="site-branding">
+      <img src="logo.png" alt="Masjid of Ummah - Built By Ummah" class="site-logo-large">
+      <div class="sr-only">
+        <h1>Masjid of Ummah</h1>
+        <p>Built By Ummah</p>
+      </div>
+    </div>
+
+    <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About us</a>
-      <!-- <a href="ramadan.html">Ramadan</a> -->
-      <a href="parking.html">Parking</a>
+      <a href="prayer-times.html">Prayer times</a>
+      <a href="parking.html" style="text-decoration: underline;">Parking</a>
       <a href="contact.html">Contact</a>
       <a href="donate.html">Donate</a>
     </nav>
   </header>
+
+  <!-- Main Content -->
+  <main class="page">
+    
+    <div style="text-align: center;">
+      <h1 class="hero-title">Parking Guidelines</h1>
+      <p class="hero-subtitle">Please review the map below to see where parking is permitted.</p>
+    </div>
+
+    <div class="parking-container">
+      
+      <!-- Map Image -->
+      <div>
+        <img src="parking-map.png" alt="Map showing parking zones around Masjid of Ummah" class="parking-map-img">
+        
+        <div class="parking-warning">
+          ⚠️ <strong>IMPORTANT:</strong> Please be respectful of our neighbors. Do not block any residential driveways, mailboxes, or fire hydrants under any circumstances.
+        </div>
+      </div>
+
+      <!-- Legend and Reminders -->
+      <div>
+        <div class="legend-card" style="margin-bottom: 24px;">
+          <h2>Parking Map Legend</h2>
+          
+          <div class="legend-item">
+            <div class="color-box color-red"></div>
+            <div class="legend-text">
+              <h3>Private Masjid Parking</h3>
+              <p>Main parking lot strictly reserved for attendees.</p>
+            </div>
+          </div>
+
+          <div class="legend-item">
+            <div class="color-box color-purple"></div>
+            <div class="legend-text">
+              <h3>7-Eleven Parking</h3>
+              <p>Approved parking area located at the 7-Eleven down the street.</p>
+            </div>
+          </div>
+
+          <div class="legend-item">
+            <div class="color-box color-orange"></div>
+            <div class="legend-text">
+              <h3>Local Company Parking</h3>
+              <p>Available ONLY during Jumu'ah and Ramadan with special permission.</p>
+            </div>
+          </div>
+
+          <div class="legend-item">
+            <div class="color-box color-green"></div>
+            <div class="legend-text">
+              <h3>Street Parking (Elm St)</h3>
+              <p>Public street parking available along N Elm St.</p>
+            </div>
+          </div>
+
+          <div class="legend-item">
+            <div class="color-box color-blue"></div>
+            <div class="legend-text">
+              <h3>Street Parking (Center St)</h3>
+              <p>Public street parking available along E Center St.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Islamic Etiquette Section -->
+        <div class="legend-card">
+          <h2 style="color: #0b8b6f;">Rights of the Neighbor</h2>
+          
+          <p style="font-size: 14px; color: #345; margin-bottom: 12px; line-height: 1.5;">
+            <strong>Quran (4:36):</strong> Commands goodness to parents, kin, orphans, the poor, and neighbors (both near and distant).
+          </p>
+
+          <p style="font-size: 14px; color: #345; margin-bottom: 12px; line-height: 1.5;">
+            <strong>Hadith (Bukhari/Muslim):</strong> "Whoever believes in Allah and the Last Day should not hurt his neighbor."
+          </p>
+
+          <p style="font-size: 14px; color: #345; margin-bottom: 12px; line-height: 1.5;">
+            <strong>Hadith (Muslim):</strong> "He will not enter paradise, the one whose neighbor is not safe from his harmful conduct."
+          </p>
+
+          <p style="font-size: 14px; color: #345; margin: 0; line-height: 1.5;">
+            <strong>Hadith (Bukhari):</strong> Angel Jibreel advised the Prophet ﷺ to treat neighbors so well that he thought they might be assigned inheritance.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Standard Site Footer -->
+  <footer>
+    © <span id="year"></span> Masjid of Ummah. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
