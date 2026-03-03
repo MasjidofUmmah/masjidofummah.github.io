@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Masjid of Ummah – Home</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   <header class="site-header">
@@ -26,45 +26,63 @@
   </header>
 
   <section class="hero">
-    <div>
-      <p class="hero-highlight">Welcome to Masjid of Ummah</p>
+    
+    <!-- Centered Text Section -->
+    <div class="hero-content-left">
+      <div>
+        <p class="hero-highlight">Welcome to Masjid of Ummah</p>
+      </div>
       <h1 class="hero-title">A house of worship, learning, and community in Itasca, IL.</h1>
       <p class="hero-subtitle">
-        Join us for the five daily prayers, Jumuah, classes, and family programs for all ages.
+        Join us for the five daily prayers, Jumu'ah, classes, and family programs for all ages.
       </p>
-      <p class="hero-info">
-        Address: 207 E Center St, Itasca, IL 60143<br>
-        Phone: (773) 771-4204<br>
-        Email: majidofummah207@gmail.com<br>
-        Instagram: @masjidofummah
+      
+      <p class="hero-info hero-info-links">
+        <strong>Address:</strong> 207 E Center St, Itasca, IL 60143<br>
+        <strong>Phone:</strong> <a href="tel:+17737714204">(773) 771-4204</a><br>
+        <strong>Email:</strong> <a href="mailto:majidofummah207@gmail.com">majidofummah207@gmail.com</a><br>
+        <strong>Instagram:</strong> <a href="https://instagram.com/masjidofummah" target="_blank">@masjidofummah</a>
       </p>
     </div>
 
+    <!-- Prayer Times Section -->
     <div class="hero-grid">
-      <div class="card">
-        <h2>Today’s schedule</h2>
-        <div class="prayer-times-widget">
+      <div class="prayer-card-container">
+        <div class="prayer-widget-wrapper">
           <iframe
-            src="https://timing.athanplus.com/masjid/widgets/embed?theme=1&masjid_id=PAPybNdJ&khutbah=1:00PM"
+            src="https://timing.athanplus.com/masjid/widgets/embed?theme=3&masjid_id=PAPybNdJ&khutbah=1:00PM"
             width="100%"
-            height="320"
+            height="400"
             frameborder="0"
-            allowtransparency="true">
+            allowtransparency="true"
+            style="display: block;">
           </iframe>
         </div>
       </div>
     </div>
+    
   </section>
 
-  <section class="two-col">
+  <!-- Changed class from two-col to three-col to fit the new card -->
+  <section class="two-col" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    
     <div class="card">
       <h2>Programs & services</h2>
       <p>
-        Qur’an classes, youth programs, family nights, and community service projects
-        are offered throughout the year. Visit the About page to learn more.
+        Qur’an classes, youth programs, and family nights are offered throughout the year. Visit the About page to learn more.
       </p>
       <a href="about.html" class="link-button">About our masjid</a>
     </div>
+
+    <!-- NEW CARD ADDED HERE -->
+    <div class="card">
+      <h2>Community Support</h2>
+      <p>
+        Guided by Islamic principles, our masjid regularly provides support, charity, and essential resources to those in need.
+      </p>
+      <a href="contact.html" class="link-button">Reach out to us</a>
+    </div>
+
     <div class="card">
       <h2>Support the masjid</h2>
       <p>

@@ -179,6 +179,49 @@ footer {
 }
 
 /* =========================================
+   HOMEPAGE HERO STYLES (NEW)
+   ========================================= */
+.hero-content-left {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-info-links {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.hero-info-links a {
+  color: #064b3b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-info-links a:hover {
+  text-decoration: underline;
+}
+
+.prayer-card-container {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.prayer-widget-wrapper {
+  margin: 0;
+  width: 100%;
+}
+
+/* =========================================
    CONTACT PAGE STYLES
    ========================================= */
 .contact-container {
@@ -249,7 +292,6 @@ footer {
 
 .donate-grid {
   display: grid;
-  /* This creates the horizontal side-by-side row on desktop */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   margin-top: 24px;
@@ -284,24 +326,6 @@ footer {
   font-weight: 600;
   color: #064b3b;
   font-size: 16px;
-}
-
-/* =========================================
-   RESPONSIVE (MOBILE)
-   ========================================= */
-@media (max-width: 720px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-  .main-nav {
-    gap: 12px;
-  }
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
-  .map-container {
-    min-height: 300px;
-  }
 }
 
 /* =========================================
@@ -419,7 +443,6 @@ footer {
   margin-top: 2px;
 }
 
-/* Legend Colors matching your map */
 .color-red { background-color: #ff3b30; }
 .color-purple { background-color: #c026d3; }
 .color-orange { background-color: #f97316; }
@@ -450,8 +473,23 @@ footer {
   font-size: 14px;
 }
 
-/* Update mobile layout */
+
+/* =========================================
+   RESPONSIVE (MOBILE)
+   ========================================= */
 @media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .main-nav {
+    gap: 12px;
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  .map-container {
+    min-height: 300px;
+  }
   .parking-container {
     grid-template-columns: 1fr;
   }
