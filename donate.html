@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Masjid of Ummah – Donate</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   
+  <!-- Standard Site Header -->
   <header class="site-header">
     <div class="site-branding">
       <img src="logo.png" alt="Masjid of Ummah - Built By Ummah" class="site-logo-large">
@@ -20,30 +21,38 @@
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About us</a>
+      <a href="prayer-times.html">Prayer times</a>
       <a href="parking.html">Parking</a>
       <a href="contact.html">Contact</a>
       <a href="donate.html" style="text-decoration: underline;">Donate</a>
     </nav>
   </header>
 
-  <main class="page">    
+  <!-- Main Content -->
+  <main class="page">
+    
     <div class="donate-hero">
       <h1 class="hero-title">Support Your Masjid</h1>
       <p class="hero-subtitle">
         "Those who spend their wealth [in Allah's way] by night and by day, secretly and publicly - they will have their reward with their Lord." (Quran 2:274)
       </p>
-      <p style="color: #345; max-width: 600px; margin: 0 auto;">
-        Your generous contributions help us maintain the facility, cover operational costs, and continue providing essential educational and community programs. All donations are tax-deductible.
+      
+      <!-- Updated paragraph highlighting charity first -->
+      <p style="color: #345; max-width: 650px; margin: 0 auto;">
+        Your generous contributions are primarily used for <strong>charity and helping those in need</strong>. The remaining funds go toward maintaining the masjid facility, covering operational costs, and supporting our educational programs. All donations are tax-deductible.
       </p>
     </div>
 
     <div class="donate-grid">
-            <div class="card donate-card">
+      
+      <!-- Option 1: Credit/Debit Card (Link to external portal) -->
+      <div class="card donate-card">
         <h3>Donate Online</h3>
         <p>Make a secure, one-time or recurring donation using your credit card, debit card, or bank account.</p>
         <a href="https://donation.masjidal.com/MasjidofUmmah/" class="link-button" style="padding: 12px 24px; font-size: 16px;">Donate via Credit Card</a>
       </div>
 
+      <!-- Option 2: Zelle -->
       <div class="card donate-card">
         <h3>Donate via Zelle</h3>
         <p>Send your donation instantly with zero processing fees through your bank's Zelle app.</p>
@@ -53,6 +62,7 @@
         </div>
       </div>
 
+      <!-- Option 3: Mail a Check -->
       <div class="card donate-card">
         <h3>Mail a Check</h3>
         <p>Prefer to send a physical check? Please make checks payable to <strong>Masjid of Ummah</strong>.</p>
@@ -63,9 +73,11 @@
           Itasca, IL 60143
         </div>
       </div>
+
     </div>
   </main>
 
+  <!-- Standard Site Footer -->
   <footer>
     © <span id="year"></span> Masjid of Ummah. All rights reserved.
   </footer>
