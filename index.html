@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Masjid of Ummah – Home</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
   
   <header class="site-header">
-    <!-- Updated Branding: Flexbox aligns the logo and text side-by-side -->
-    <div class="site-branding" style="display: flex; align-items: center;">
+    <div class="site-branding">
       <a href="index.html" style="display: block;">
-        <img src="logo.png" alt="Masjid of Ummah Logo" class="site-logo-large" style="max-height: 70px; width: auto;">
+        <img src="logo.png" alt="Masjid of Ummah Logo" class="site-logo-large">
       </a>
-      <!-- Text is now visible and styled next to the logo -->
-      <div style="margin-left: 16px;">
-        <h1 style="margin: 0; font-size: 22px; color: #064b3b; font-weight: bold;">Masjid of Ummah</h1>
-        <p style="margin: 0; font-size: 14px; color: #345;">Built By Ummah</p>
+      <div class="branding-text">
+        <h1>Masjid of Ummah</h1>
+        <p>Built By Ummah</p>
       </div>
     </div>
 
@@ -30,87 +29,75 @@
     </nav>
   </header>
 
-  <section class="hero">
-    
-    <!-- Centered Text Section -->
-    <div class="hero-content-left">
-      <div>
-        <p class="hero-highlight">Welcome to Masjid of Ummah</p>
+  <main>
+    <section class="hero">
+      <!-- Centered Text Section -->
+      <div class="hero-content-left">
+        <div>
+          <p class="hero-highlight">Welcome to Masjid of Ummah</p>
+        </div>
+        <h1 class="hero-title">A house of worship, learning, and community in Itasca, IL.</h1>
+        <p class="hero-subtitle">
+          Join us for the five daily prayers, Jumu'ah, classes, and family programs for all ages.
+        </p>
+        
+        <p class="hero-info hero-info-links">
+          <strong>Address:</strong> 207 E Center St, Itasca, IL 60143<br>
+          <strong>Phone:</strong> <a href="tel:+17737714204">(773) 771-4204</a><br>
+          <strong>Email:</strong> <a href="mailto:majidofummah207@gmail.com">majidofummah207@gmail.com</a><br>
+          <strong>Instagram:</strong> <a href="https://instagram.com/masjidofummah" target="_blank">@masjidofummah</a>
+        </p>
       </div>
-      <h1 class="hero-title">A house of worship, learning, and community in Itasca, IL.</h1>
-      <p class="hero-subtitle">
-        Join us for the five daily prayers, Jumu'ah, classes, and family programs for all ages.
-      </p>
-      
-      <p class="hero-info hero-info-links">
-        <strong>Address:</strong> 207 E Center St, Itasca, IL 60143<br>
-        <strong>Phone:</strong> <a href="tel:+17737714204">(773) 771-4204</a><br>
-        <strong>Email:</strong> <a href="mailto:majidofummah207@gmail.com">majidofummah207@gmail.com</a><br>
-        <strong>Instagram:</strong> <a href="https://instagram.com/masjidofummah" target="_blank">@masjidofummah</a>
-      </p>
-    </div>
 
-    <!-- Prayer Times Section -->
-    <div class="hero-grid">
-      <div class="prayer-card-container">
-        <div class="prayer-widget-wrapper">
-          <iframe
-            src="https://timing.athanplus.com/masjid/widgets/embed?theme=3&masjid_id=PAPybNdJ&khutbah=1:00PM"
-            width="100%"
-            height="400"
-            frameborder="0"
-            allowtransparency="true"
-            style="display: block;">
-          </iframe>
+      <!-- Prayer Times Section -->
+      <div class="hero-grid">
+        <div class="prayer-card-container">
+          <div class="prayer-widget-wrapper">
+            <iframe
+              src="https://timing.athanplus.com/masjid/widgets/embed?theme=3&masjid_id=PAPybNdJ&khutbah=1:00PM"
+              width="100%"
+              height="400"
+              frameborder="0"
+              allowtransparency="true"
+              style="display: block;">
+            </iframe>
+          </div>
         </div>
       </div>
-    </div>
-    
-  </section>
+    </section>
 
-  <!-- NEW ANNOUNCEMENT PHOTO SLIDER (TALL 3:4 FORMAT) -->
-  <section class="slider-container" style="max-width: 800px; margin: 0 auto 48px; padding: 0 24px;">
-    <h2 style="font-size: 24px; color: #064b3b; text-align: center; margin-top: 0; margin-bottom: 24px;">Announcements & Events</h2>
-    
-    <!-- Height set to 650px to accommodate tall posters without cropping -->
-    <div class="slider-wrapper" style="width: 100%; height: 650px; border-radius: 16px; overflow: hidden; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: #064b3b;">
-      <div class="slider-images" style="display: flex; width: 300%; height: 100%; animation: slideAnimation 15s infinite ease-in-out;">
-        <!-- object-fit: contain ensures the whole image fits in the box -->
-        <img src="announce1.jpeg" alt="Announcement 1" style="width: 33.3333%; height: 100%; object-fit: contain; padding: 16px; box-sizing: border-box;">
-        <img src="announce2.jpeg" alt="Announcement 2" style="width: 33.3333%; height: 100%; object-fit: contain; padding: 16px; box-sizing: border-box;">
-        <img src="announce3.jpeg" alt="Announcement 3" style="width: 33.3333%; height: 100%; object-fit: contain; padding: 16px; box-sizing: border-box;">
+    <!-- ANNOUNCEMENT PHOTO SLIDER (TALL 3:4 FORMAT) -->
+    <section class="slider-container">
+      <h2 style="font-size: 24px; color: #064b3b; text-align: center; margin-top: 0; margin-bottom: 24px;">Announcements & Events</h2>
+      <div class="slider-wrapper">
+        <div class="slider-images">
+          <img src="announce1.jpeg" alt="Announcement 1">
+          <img src="announce2.jpeg" alt="Announcement 2">
+          <img src="announce3.jpeg" alt="Announcement 3">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="two-col" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-    
-    <div class="card">
-      <h2>Programs & services</h2>
-      <p>
-        Qur’an classes, youth programs, and family nights are offered throughout the year. Visit the About page to learn more.
-      </p>
-      <a href="about.html" class="link-button">About our masjid</a>
-    </div>
+    <section class="two-col">
+      <div class="card">
+        <h2>Programs & services</h2>
+        <p>Qur’an classes, youth programs, and family nights are offered throughout the year. Visit the About page to learn more.</p>
+        <a href="about.html" class="link-button">About our masjid</a>
+      </div>
 
-    <div class="card">
-      <h2>Community Support</h2>
-      <p>
-        Guided by Islamic principles, our masjid regularly provides support, charity, and essential resources to those in need.
-      </p>
-      <a href="contact.html" class="link-button">Reach out to us</a>
-    </div>
+      <div class="card">
+        <h2>Community Support</h2>
+        <p>Guided by Islamic principles, our masjid regularly provides support, charity, and essential resources to those in need.</p>
+        <a href="contact.html" class="link-button">Reach out to us</a>
+      </div>
 
-    <div class="card">
-      <h2>Support the masjid</h2>
-      <p>
-        Your donations keep the masjid open, maintain the building, and fund education
-        and outreach programs.
-      </p>
-      <a href="donate.html" class="link-button">Donate online</a>
-    </div>
-
-  </section>
+      <div class="card">
+        <h2>Support the masjid</h2>
+        <p>Your donations keep the masjid open, maintain the building, and fund education and outreach programs.</p>
+        <a href="donate.html" class="link-button">Donate online</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     © <span id="year"></span> Masjid of Ummah. All rights reserved.

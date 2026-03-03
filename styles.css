@@ -8,7 +8,7 @@ body {
   color: #222;
 }
 
-/* Added for SEO & Screen Readers (hides text visually since the logo has the text drawn in) */
+/* Added for SEO & Screen Readers */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -32,19 +32,36 @@ body {
 
 .site-branding {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
+  gap: 14px;
 }
 
 .site-logo-large {
-  height: 110px;
+  height: 70px;
   width: auto;
-  margin-bottom: 6px;
+}
+
+.branding-text {
+  text-align: left;
+}
+
+.branding-text h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.1;
+  color: #e8fff8;
+  font-weight: bold;
+}
+
+.branding-text p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #a7f3d0;
 }
 
 .main-nav {
-  margin-top: 12px;
+  margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -149,6 +166,7 @@ body {
   text-decoration: none;
   font-size: 13px;
   font-weight: 600;
+  text-align: center;
 }
 
 .link-button.secondary {
@@ -167,10 +185,6 @@ body {
   font-weight: 600;
 }
 
-.prayer-times-widget {
-  margin-top: 8px;
-}
-
 footer {
   text-align: center;
   padding: 16px 24px 24px;
@@ -179,7 +193,7 @@ footer {
 }
 
 /* =========================================
-   HOMEPAGE HERO STYLES (NEW)
+   HOMEPAGE HERO STYLES
    ========================================= */
 .hero-content-left {
   text-align: center;
@@ -219,6 +233,51 @@ footer {
 .prayer-widget-wrapper {
   margin: 0;
   width: 100%;
+}
+
+/* =========================================
+   ANNOUNCEMENT SLIDER STYLES
+   ========================================= */
+.slider-container {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  padding: 0 24px;
+}
+
+.slider-wrapper {
+  width: 100%;
+  height: 650px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background: #064b3b;
+}
+
+.slider-images {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slideAnimation 15s infinite ease-in-out;
+}
+
+.slider-images img {
+  width: 33.3333%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+@keyframes slideAnimation {
+  0%, 25% { transform: translateX(0); }
+  33.33%, 58.33% { transform: translateX(-33.3333%); }
+  66.66%, 91.66% { transform: translateX(-66.6666%); }
+  100% { transform: translateX(0); }
+}
+
+.slider-wrapper:hover .slider-images {
+  animation-play-state: paused;
 }
 
 /* =========================================
@@ -303,6 +362,8 @@ footer {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
 }
 
 .donate-card h3 {
@@ -316,6 +377,7 @@ footer {
   color: #556;
   margin-bottom: 24px;
   line-height: 1.5;
+  flex-grow: 1;
 }
 
 .zelle-info {
@@ -473,7 +535,6 @@ footer {
   font-size: 14px;
 }
 
-
 /* =========================================
    RESPONSIVE (MOBILE)
    ========================================= */
@@ -494,55 +555,8 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-
-/* =========================================
-   ANNOUNCEMENT SLIDER STYLES
-   ========================================= */
-.slider-container {
-  max-width: 960px;
-  margin: 0 auto 32px;
-  padding: 0 24px;
-}
-
-.slider-wrapper {
-  width: 100%;
-  height: 350px;
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  background: #064b3b;
-}
-
-.slider-images {
-  display: flex;
-  width: 300%; /* 3 images = 300% */
-  height: 100%;
-  /* 12 second loop total (4 seconds per image) */
-  animation: slideAnimation 12s infinite ease-in-out;
-}
-
-.slider-images img {
-  width: 33.3333%; /* 100% divided by 3 images */
-  height: 100%;
-  object-fit: cover;
-}
-
-/* 
-  Animation logic for 3 images:
-  0-25%: Show Image 1
-  33-58%: Show Image 2
-  66-91%: Show Image 3
-  100%: Back to Image 1
-*/
-@keyframes slideAnimation {
-  0%, 25% { transform: translateX(0); }
-  33.33%, 58.33% { transform: translateX(-33.3333%); }
-  66.66%, 91.66% { transform: translateX(-66.6666%); }
-  100% { transform: translateX(0); }
-}
-
-/* Pause the slider if someone hovers their mouse over it to read */
-.slider-wrapper:hover .slider-images {
-  animation-play-state: paused;
+@media (max-width: 720px) {
+  .slider-wrapper {
+    height: 450px; 
+  }
 }
