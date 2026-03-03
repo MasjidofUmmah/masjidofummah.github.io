@@ -303,3 +303,68 @@ footer {
     min-height: 300px;
   }
 }
+
+/* =========================================
+   ABOUT PAGE STYLES
+   ========================================= */
+.about-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px;
+  line-height: 1.7;
+  color: #345;
+  font-size: 16px;
+}
+
+.about-content h2 {
+  color: #064b3b;
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.mission-box {
+  background: #f8fbfb;
+  border-left: 4px solid #0b8b6f;
+  padding: 20px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  font-weight: 500;
+  color: #064b3b;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.program-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  border-top: 4px solid #0b8b6f;
+}
+
+.program-card h3 {
+  font-size: 18px;
+  color: #064b3b;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.program-card p {
+  color: #556;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
