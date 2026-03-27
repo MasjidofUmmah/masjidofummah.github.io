@@ -256,13 +256,15 @@ footer {
 
 .slider-images {
   display: flex;
-  width: 300%;
   height: 100%;
-  animation: slideAnimation 15s infinite ease-in-out;
+  --count: 3;
+  --duration: 5s;
+  width: calc(100% * var(--count));
+  animation: slideAnimation var(--duration) steps(var(--count)) infinite;
 }
 
 .slider-images img {
-  width: 33.3333%;
+  width: calc(100% / var(--count));
   height: 100%;
   object-fit: contain;
   padding: 16px;
@@ -270,10 +272,8 @@ footer {
 }
 
 @keyframes slideAnimation {
-  0%, 25% { transform: translateX(0); }
-  33.33%, 58.33% { transform: translateX(-33.3333%); }
-  66.66%, 91.66% { transform: translateX(-66.6666%); }
-  100% { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-1 * ((var(--count) - 1) * 100% / var(--count)))); }
 }
 
 .slider-wrapper:hover .slider-images {

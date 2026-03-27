@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Masjid of Ummah – Home</title>
+  <title>Masjid Ummah – Home</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="styles.css?v=10">
 </head>
@@ -12,10 +12,10 @@
   <header class="site-header">
     <div class="site-branding">
       <a href="index.html" style="display: block;">
-        <img src="logo.png" alt="Masjid of Ummah Logo" class="site-logo-large">
+        <img src="logo.png" alt="Masjid Ummah Logo" class="site-logo-large">
       </a>
       <div class="branding-text">
-        <h1>Masjid of Ummah</h1>
+        <h1>Masjid Ummah</h1>
         <p>Built By Ummah</p>
       </div>
     </div>
@@ -34,7 +34,7 @@
       <!-- Centered Text Section -->
       <div class="hero-content-left">
         <div>
-          <p class="hero-highlight">Welcome to Masjid of Ummah</p>
+          <p class="hero-highlight">Welcome to Masjid Ummah</p>
         </div>
         <h1 class="hero-title">A house of worship, learning, and community in Itasca, IL.</h1>
         <p class="hero-subtitle">
@@ -100,11 +100,30 @@
   </main>
 
   <footer>
-    © <span id="year"></span> Masjid of Ummah. All rights reserved.
+    © <span id="year"></span> Masjid Ummah. All rights reserved.
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    (function(){
+      const slider = document.querySelector('.slider-images');
+      if (!slider) return;
+      const imgs = slider.querySelectorAll('img');
+      const n = imgs.length || 1;
+      slider.style.setProperty('--count', n);
+      // if single image, stop animation and make images full-width
+      if (n <= 1) {
+        slider.style.animation = 'none';
+        slider.style.width = '100%';
+        imgs.forEach(img => img.style.width = '100%');
+        return;
+      }
+      // animation, widths, and keyframes are handled by CSS using --count
+      // allow override of duration if desired
+      slider.style.setProperty('--duration', '15s');
+    })();
   </script>
 </body>
 </html>
