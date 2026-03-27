@@ -15,8 +15,8 @@
         <img src="logo.png" alt="Masjid Ummah Logo" class="site-logo-large">
       </a>
       <div class="branding-text">
-        <h1>Masjid Ummah</h1>
-        <p>Built By Ummah</p>
+        <h1>MASJID UMMAH</h1>
+        <p>BUILT BY THE UMMAH</p>
       </div>
     </div>
 
@@ -44,7 +44,7 @@
         <p class="hero-info hero-info-links">
           <strong>Address:</strong> 207 E Center St, Itasca, IL 60143<br>
           <strong>Phone:</strong> <a href="tel:+17737714204">(773) 771-4204</a><br>
-          <strong>Email:</strong> <a href="mailto:majidofummah207@gmail.com">majidofummah207@gmail.com</a><br>
+          <strong>Email:</strong> <a href="mailto:masjidofummah207@gmail.com">masjidofummah207@gmail.com</a><br>
           <strong>Instagram:</strong> <a href="https://instagram.com/masjidofummah" target="_blank">@masjidofummah</a>
         </p>
       </div>
@@ -66,14 +66,13 @@
       </div>
     </section>
 
-    <!-- ANNOUNCEMENT PHOTO SLIDER (TALL 3:4 FORMAT) -->
+    <!-- ANNOUNCEMENT PHOTO SLIDER -->
     <section class="slider-container">
       <h2 style="font-size: 24px; color: #064b3b; text-align: center; margin-top: 0; margin-bottom: 24px;">Announcements & Events</h2>
       <div class="slider-wrapper">
         <div class="slider-images">
           <img src="announce1.jpeg" alt="Announcement 1">
           <img src="announce2.jpeg" alt="Announcement 2">
-          <!-- <img src="announce3.jpeg" alt="Announcement 3"> -->
         </div>
       </div>
     </section>
@@ -106,23 +105,53 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
   <script>
-    (function(){
+    // DYNAMIC SLIDER LOGIC
+    (function () {
       const slider = document.querySelector('.slider-images');
       if (!slider) return;
-      const imgs = slider.querySelectorAll('img');
-      const n = imgs.length || 1;
-      slider.style.setProperty('--count', n);
-      // if single image, stop animation and make images full-width
-      if (n <= 1) {
-        slider.style.animation = 'none';
-        slider.style.width = '100%';
-        imgs.forEach(img => img.style.width = '100%');
-        return;
+
+      const imgs = Array.from(slider.querySelectorAll('img'));
+      const n = imgs.length;
+
+      if (n === 0) return;
+
+      // Adjust container width to accommodate all images
+      slider.style.width = `${n * 100}%`;
+
+      // Assign equal flex width to each image
+      imgs.forEach(img => {
+        img.style.width = `${100 / n}%`;
+        img.style.flex = `0 0 ${100 / n}%`;
+      });
+
+      // If only one image, do not start slideshow
+      if (n === 1) return;
+
+      let current = 0;
+      const intervalMs = 4000;
+
+      function show(index) {
+        slider.style.transform = `translateX(-${(100 / n) * index}%)`;
       }
-      // animation, widths, and keyframes are handled by CSS using --count
-      // allow override of duration if desired
-      slider.style.setProperty('--duration', '15s');
+
+      function next() {
+        current = (current + 1) % n;
+        show(current);
+      }
+
+      let timer = setInterval(next, intervalMs);
+
+      // Pause on hover
+      const wrapper = document.querySelector('.slider-wrapper');
+      if (wrapper) {
+        wrapper.addEventListener('mouseenter', () => clearInterval(timer));
+        wrapper.addEventListener('mouseleave', () => {
+          clearInterval(timer);
+          timer = setInterval(next, intervalMs);
+        });
+      }
     })();
   </script>
 </body>
