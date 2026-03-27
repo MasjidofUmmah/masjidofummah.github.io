@@ -38,7 +38,7 @@ body {
 }
 
 .site-logo-large {
-  height: 70px;
+  height: 110px;
   width: auto;
 }
 
@@ -257,7 +257,7 @@ footer {
 .slider-images {
   display: flex;
   height: 100%;
-  --count: 3;
+  --count: 2; /* Update this to the number of images */
   --duration: 5s;
   width: calc(100% * var(--count));
   animation: slideAnimation var(--duration) steps(var(--count)) infinite;
@@ -542,6 +542,9 @@ footer {
   .hero {
     grid-template-columns: 1fr;
   }
+  .site-logo-large {
+    height: 90px;
+  }
   .main-nav {
     gap: 12px;
   }
@@ -558,5 +561,8 @@ footer {
 @media (max-width: 720px) {
   .slider-wrapper {
     height: 450px; 
+  }
+  .site-logo-large {
+    height: 70px;
   }
 }
